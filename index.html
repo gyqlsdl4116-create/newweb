@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에브리펫 | 우리 강아지를 위한 프리미엄 케어</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===================== UTILITY BAR ===================== -->
+  <div class="utility-bar">
+    <div class="wrap">
+      <div>🐾 5만원 이상 구매 시 무료배송</div>
+      <div class="links">
+        <a href="#">고객센터</a>
+        <a href="#">주문조회</a>
+        <a href="login.html" id="auth-link">로그인</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header>
+    <div class="wrap header-row">
+      <a href="#" class="logo">
+        <div>
+          <b>EVERYPET</b>
+
+          <span>PREMIUM CARE FOR EVERY PET</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <button class="category-toggle" id="category-toggle" aria-label="카테고리 메뉴 열기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+        <a href="#" class="on">홈</a>
+        <a href="#bestsellers-section">베스트</a>
+        <a href="#new-arrivals-section">신상품</a>
+        <a href="#event-section">이벤트</a>
+
+      </nav>
+
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7" />
+          <path d="M21 21l-4.3-4.3" />
+        </svg>
+        <input type="text" placeholder="상품, 브랜드를 검색해보세요">
+      </div>
+
+      <div class="header-actions">
+        <a href="#" class="icon-btn" aria-label="찜">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 8.6a5.5 5.5 0 00-9.3-4 5.5 5.5 0 00-9.3 4c0 6 9.3 11.4 9.3 11.4s9.3-5.4 9.3-11.4z" />
+          </svg>
+        </a>
+        <a href="#" class="icon-btn" aria-label="장바구니">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6" />
+          </svg>
+          <span class="badge" id="cart-badge" style="display:none;">3</span>
+        </a>
+        <button class="btn-ink" id="mypage-btn" style="display:none;">마이페이지</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="category-strip">
+    <div class="wrap">
+      <a href="#">사료</a>
+      <a href="#">간식/트릿</a>
+      <a href="#">영양제</a>
+      <a href="#">장난감</a>
+      <a href="#">하네스/리드줄</a>
+      <a href="#">위생용품</a>
+      <a href="#">침구/하우스</a>
+      <a href="#">병원용품</a>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-slider" id="hero-slider">
+
+        <div class="hero-slide is-active">
+          <!-- ===== 배너 이미지 삽입 위치 (1번 슬라이드) ===== -->
+          <div class="ph-img" data-label="배너 1 이미지 자리"></div>
+        </div>
+
+        <div class="hero-slide">
+          <!-- ===== 배너 이미지 삽입 위치 (2번 슬라이드) ===== -->
+          <div class="ph-img" data-label="배너 2 이미지 자리"></div>
+        </div>
+
+        <div class="hero-slide">
+          <!-- ===== 배너 이미지 삽입 위치 (3번 슬라이드) ===== -->
+          <div class="ph-img" data-label="배너 3 이미지 자리"></div>
+        </div>
+
+        <div class="hero-slide-counter" id="hero-slide-counter">1/3</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST STRIP ===================== -->
+  <section class="trust-strip">
+    <div class="wrap">
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9" />
+            <path d="M22 4L12 14l-3-3" />
+          </svg></div>
+        <div><b>수의사 검증 제품</b><span>전문가가 확인한 성분</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="7" width="15" height="13" rx="2" />
+            <path d="M16 11h3l4 4v5h-7" />
+            <circle cx="6" cy="20" r="2" />
+            <circle cx="18" cy="20" r="2" />
+          </svg></div>
+        <div><b>당일/익일 배송</b><span>5만원 이상 무료배송</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="17.5" rx="5.5" ry="3.6" />
+            <ellipse cx="5.8" cy="10" rx="2" ry="2.6" />
+            <ellipse cx="12" cy="7" rx="2" ry="2.6" />
+            <ellipse cx="18.2" cy="10" rx="2" ry="2.6" />
+          </svg></div>
+        <div><b>건강기록 맞춤추천</b><span>쓰담쓰담 앱과 연동</span></div>
+      </div>
+      <div class="trust-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg></div>
+        <div><b>7일 이내 교환/반품</b><span>단순변심도 OK</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BEST SELLERS ===================== -->
+  <section class="section" id="bestsellers-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Best Sellers</div>
+          <h2>지금 가장 많이 담은 상품</h2>
+        </div>
+        <a class="viewall">전체보기 →</a>
+      </div>
+
+      <div class="chip-row">
+        <div class="chip on" data-filter="전체">전체</div>
+        <div class="chip" data-filter="사료">사료</div>
+        <div class="chip" data-filter="간식">간식</div>
+        <div class="chip" data-filter="영양제">영양제</div>
+        <div class="chip" data-filter="용품">용품</div>
+
+      </div>
+
+      <div class="bestseller-scroll-wrap">
+        <div class="bestseller-scroll" id="bestseller-scroll">
+
+          <div class="prod-grid" data-view="전체">
+
+            <div class="prod-card" data-cat="간식">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/간식.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">순수</div>
+                <div class="name">순수한 강아지 유기농 간식 연어 오리 소고기 육포 슬라이스 180g</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.9 (999+)</div>
+                <div class="price-row"><span class="price">6,900원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/샴푸1.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">클린포포</div>
+                <div class="name">몽몽버블 알러지 FREE 저자극 올인원 강아지 샴푸 (거품망 증정)
+
+                </div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (371)</div>
+                <div class="price-row"><span class="discount">18%</span><span class="price">16,300원</span><span
+                    class="price strike">19,800원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="영양제">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/영양제1.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">건강하개</div>
+                <div class="name">강아지 관절 영양제 관절멍멍 슬개골 관절강화 글루코사민</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (469)</div>
+                <div class="price-row"><span class="price">24,900원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/쿨매트.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">쿨브리즈</div>
+                <div class="name">(-7도) 시원한 냉감 쿨멍매트(60*75cm) 강아지 여름용 냉감 매트</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.9 (328)</div>
+                <div class="price-row"><span class="discount">40%</span><span class="price">21,800원</span><span
+                    class="price strike">36,300원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="간식">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/채소믹스.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat"></div>
+                <div class="name">동결건조 강아지 수제 채소믹스</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.7 (239)</div>
+                <div class="price-row"><span class="price">9,900</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="영양제">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/퍼피사료.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">멍시피</div>
+                <div class="name">퍼피레시피 퍼피 전용 사료 1.5kg</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.6 (187)</div>
+                <div class="price-row"><span class="discount">20%</span><span class="price">16,800원</span><span
+                    class="price strike">21,000원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/베변패드.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">뽀송랩</div>
+                <div class="name">여기서!배변패드(40*50cm) 100매</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (296)</div>
+                <div class="price-row"><span class="discount">33%</span><span class="price">10,900원</span><span
+                    class="price strike">16,300원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="영양제">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/유산균.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">펫밸런스</div>
+                <div class="name">락토독 데일리 프로바이오틱스 장건강 강아지 유산균</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.9 (287)</div>
+                <div class="price-row"><span class="discount">20%</span><span class="price">22,000원</span><span
+                    class="price strike">27,500원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/스프레이.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">건강하개</div>
+                <div class="name">강아지 천연 아로마 벌레 퇴치 스프레이 진드기 모기 벌레기피제</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.7 (264)</div>
+                <div class="price-row"><span class="discount">10%</span><span class="price">13,500원</span><span
+                    class="price strike">15,300원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="간식">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/굿보이트릿.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">원물공방</div>
+                <div class="name">굿보이트릿 강아지 트레이닝 트릿 80g 큐브간식 훈련간식</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (261)</div>
+                <div class="price-row"><span class="price">9,700</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="사료">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/연어사료.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">멍시피</div>
+                <div class="name">건강한끼 연어&단호박 프리미엄 사료</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (136)</div>
+                <div class="price-row"><span class="discount">20%</span><span class="price">16,800원</span><span
+                    class="price strike">21,000원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="영양제">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/오메가3.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">플라이랩</div>
+                <div class="name">퓨어 오메가 강아지 오메가3 피부 모질 개선 </div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.7 (158)</div>
+                <div class="price-row"><span class="price">21,900원</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="prod-grid" data-view="사료" style="display:none;">
+
+            <div class="prod-card" data-cat="사료">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/퍼피사료.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">러브레시피</div>
+                <div class="name">퍼피레시피 퍼피 전용 사료 1.5kg</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.6 (187)</div>
+                <div class="price-row"><span class="discount">20%</span><span class="price">16,800원</span><span
+                    class="price strike">21,000원</span></div>
+              </div>
+            </div>
+
+
+
+            <div class="prod-card" data-cat="사료">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/체중사료.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">핏데일리</div>
+                <div class="name">핏데일리 강아지 체중관리 저칼로리 사료 2.5kg</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.7 (364)</div>
+                <div class="price-row"><span class="discount">10%</span><span class="price">26,100원</span><span
+                    class="price strike">29,000원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="사료">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/연어사료.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">러브레시피</div>
+                <div class="name">건강한끼 연어&단호박 프리미엄 사료</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (236)</div>
+                <div class="price-row"><span class="discount">20%</span><span class="price">16,800원</span><span
+                    class="price strike">21,000원</span></div>
+              </div>
+            </div>
+            <div class="prod-card" data-cat="사료">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/시니어사료.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">본앤조인트</div>
+                <div class="name">에이징웰 시니어 관절케어 사료 1.2kg 노령견전용</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.6 (71)</div>
+                <div class="price-row"><span class="price">18.600원</span></div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="prod-grid" data-view="간식" style="display:none;">
+
+            <div class="prod-card" data-cat="간식">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/간식.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">순수</div>
+                <div class="name">순수한 강아지 유기농 간식 연어 오리 소고기 육포 슬라이스 180g</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (999+)</div>
+                <div class="price-row"><span class="price">6,900원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="간식">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/채소믹스.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat"></div>
+                <div class="name">동결건조 강아지 수제 채소믹스</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.7 (239)</div>
+                <div class="price-row"><span class="price">9,900</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="간식">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/굿보이트릿.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">원물공방</div>
+                <div class="name">굿보이트릿 강아지 트레이닝 트릿 80g 큐브간식 훈련간식</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (261)</div>
+                <div class="price-row"><span class="price">9,700</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="간식">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/크리미츄.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">밀키데이</div>
+                <div class="name">크리미츄 강아지 츄르 퓨레 짜먹는 간식 </div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.7 (39)</div>
+                <div class="price-row"><span class="price">10,500</span>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="prod-grid" data-view="영양제" style="display:none;">
+
+            <div class="prod-card" data-cat="건강하개">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/영양제1.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">건강하개</div>
+                <div class="name">강아지 관절 영양제 관절멍멍 슬개골 관절강화 글루코사민</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (469)</div>
+                <div class="price-row"><span class="price">24,900원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="영양제">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/유산균.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">펫밸런스</div>
+                <div class="name">락토독 데일리 프로바이오틱스 장건강 강아지 유산균</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.9 (287)</div>
+                <div class="price-row"><span class="discount">20%</span><span class="price">22,000원</span><span
+                    class="price strike">27,500원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="영양제">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/오메가3.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">플라이랩</div>
+                <div class="name">퓨어 오메가 강아지 오메가3 피부 모질 개선 </div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.7 (158)</div>
+                <div class="price-row"><span class="price">21,900원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="영양제">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/눈영양제.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">플라이랩</div>
+                <div class="name">클리어아이 강아지 눈 영양제 빌베리 루테인 눈건강 눈물케어</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.6 (142)</div>
+                <div class="price-row"><span class="price">21,900원</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="prod-grid" data-view="용품" style="display:none;">
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/쿨매트.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">쿨브리즈</div>
+                <div class="name">(-7도) 시원한 냉감 쿨멍매트(60*75cm) 강아지 여름용 냉감 매트</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.9 (328)</div>
+                <div class="price-row"><span class="discount">40%</span><span class="price">21,800원</span><span
+                    class="price strike">36,300원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <span class="tag-new">HOT</span>
+                <div class="wish">♡</div>
+                <img src="image/샴푸1.png">
+              </div>
+              <div class="prod-body">
+                <div class="cat">클린포포</div>
+                <div class="name">몽몽버블 알러지 FREE 저자극 올인원 강아지 샴푸 (거품망 증정)
+
+                </div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.5 (371)</div>
+                <div class="price-row"><span class="discount">18%</span><span class="price">16,300원</span><span
+                    class="price strike">19,800원</span></div>
+              </div>
+            </div>
+
+
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/베변패드.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">뽀송랩</div>
+                <div class="name">여기서!배변패드(40*50cm) 100매</div>
+                <div class="rating"><span class="stars">★★★★★</span> 4.8 (296)</div>
+                <div class="price-row"><span class="discount">33%</span><span class="price">10,900원</span><span
+                    class="price strike">16,300원</span></div>
+              </div>
+            </div>
+
+            <div class="prod-card" data-cat="용품">
+              <div class="prod-thumb">
+                <div class="wish">♡</div>
+                <img src="image/스프레이.png">
+
+              </div>
+              <div class="prod-body">
+                <div class="cat">건강하개</div>
+                <div class="name">강아지 천연 아로마 벌레 퇴치 스프레이 진드기 모기 벌레기피제</div>
+                <div class="rating"><span class="stars">★★★★☆</span> 4.7 (264)</div>
+                <div class="price-row"><span class="discount">10%</span><span class="price">13,500원</span><span
+                    class="price strike">15,300원</span></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+
+  <!-- ===================== PROMO BANNERS ===================== -->
+  <section class="section" id="event-section" style="padding-top:0;">
+    <div class="wrap">
+      <div class="promo-duo">
+        <div class="promo-card lightpink">
+
+          <div class="promo-media">
+            <img src="image/체험단.png" alt="체험단 이미지">
+          </div>
+          <!-- ============================================ -->
+          <div class="promo-copy">
+            <div class="eyebrow">TRY FIRST</div>
+            <h3>먼저 써보고<br>솔직한 후기를 남겨주세요~</h3>
+            <button class="btn-white">체험단 신청하기</button>
+          </div>
+        </div>
+        <div class="promo-card pink">
+
+          <div class="promo-media">
+            <img src="image/배너2.png" alt="할인이벤트">
+          </div>
+          <!-- ============================================ -->
+          <div class="promo-copy">
+            <div class="eyebrow">SUMMER EVENT</div>
+            <h3>여름맞이 쿨링용품<br>Up to 50% OFF</h3>
+            <button class="btn-white">기획전 바로가기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEW ARRIVALS ===================== -->
+  <section class="section" id="new-arrivals-section" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">New Arrivals</div>
+          <h2>이번 주 새로 들어온 상품</h2>
+        </div>
+        <a class="viewall">전체보기 →</a>
+      </div>
+
+      <div class="prod-grid">
+
+        <div class="prod-card">
+          <div class="prod-thumb">
+            <span class="tag-new">NEW</span>
+            <div class="wish">♡</div>
+            <img src="image/츄츄.png">
+
+          </div>
+          <div class="prod-body">
+            <div class="cat">SSDAMLAB</div>
+            <div class="name">[신상특가] 쓰담츄 프리미엄 덴탈껌 (30개입) 치석제거 기능성 간식</div>
+            <div class="rating"><span class="stars">★★★★★</span> 4.8 (39)</div>
+            <div class="price-row"><span class="discount">30%</span><span class="price">12,500원</span><span
+                class="price strike">18,000원</span></div>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-thumb">
+            <span class="tag-new">NEW</span>
+            <div class="wish">♡</div>
+            <img src="image/이동가방.png">
+          </div>
+          <div class="prod-body">
+            <div class="cat">이지무브</div>
+            <div class="name">모던그레이 강아지 이동가방 오픈탑 반려동물 외출용 캐리어백 통풍기능 매쉬</div>
+            <div class="rating"><span class="stars">★★★★★</span> 4.9 (45)</div>
+            <div class="price-row"><span class="discount">8%</span><span class="price">27,300원</span><span
+                class="price strike">29,700원</span></div>
+          </div>
+        </div>
+        
+        <div class="prod-card">
+          <div class="prod-thumb">
+            <span class="tag-new">NEW</span>
+            <div class="wish">♡</div>
+            <img src="image/노즈워크.png">
+          </div>
+          <div class="prod-body">
+            <div class="cat">코코노즈</div>
+            <div class="name">강아지 노즈워크 매트 장난감 분리불안 훈련 스트레스 해소</div>
+            <div class="rating"><span class="stars">★★★★☆</span> 4.6 (54)</div>
+            <div class="price-row"><span class="discount">20%</span><span class="price">17,500원</span><span
+                class="price strike">21,900원</span></div>
+          </div>
+        </div>
+
+
+
+        <div class="prod-card" data-cat="용품">
+          <div class="prod-thumb">
+            <span class="tag-new">NEW</span>
+            <div class="wish">♡</div>
+            <img src="image/하네스.png">
+          </div>
+          <div class="prod-body">
+            <div class="cat">닥터조인트</div>
+            <div class="name">강아지 하네스 가슴줄 관절보호 슬개골탈구 방지 앞섬방지</div>
+            <div class="rating"><span class="stars">★★★★★</span> 4.9 (54)</div>
+            <div class="price-row"><span class="price">13,500원</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="section" style="padding-top:0;">
+    <div class="wrap">
+      <div class="newsletter">
+        <div>
+          <h3>새로운 소식과 할인 혜택을 가장 먼저 받아보세요</h3>
+          <p>에브리펫을 구독하면 신상품 알림과 회원 전용 쿠폰을 보내드려요.</p>
+        </div>
+        <form id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="이메일 주소를 입력하세요">
+          <button type="submit">구독하기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+
+            <div><b>EVERYPET</b><span>PREMIUM CARE FOR EVERY PET</span></div>
+          </a>
+          <p>우리 강아지 건강관리의 시작, 쓰담쓰담이 만드는 <br>반려동물 프리미엄 케어 마켓입니다.</p>
+        </div>
+        <div class="footer-col">
+          <h4>쇼핑</h4>
+          <ul>
+            <li><a href="#">전체상품</a></li>
+            <li><a href="#">베스트</a></li>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>고객지원</h4>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+            <li><a href="#">배송/교환/반품</a></li>
+            <li><a href="#">1:1 문의</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>회사</h4>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 EVERYPET. All rights reserved.</div>
+        <div>대표 이효빈 · 사업자등록번호 123-45-67890 · 고객센터 1234-1234</div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top-btn" aria-label="맨 위로 이동">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+      stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5" />
+      <polyline points="5 12 12 5 19 12" />
+    </svg>
+  </button>
+
+  
+  <script src="script.js"></script>
+
+</body>
+
+</html>
